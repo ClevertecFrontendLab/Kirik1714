@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
@@ -20,7 +19,6 @@ import style from './index.module.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
     <HashRouter>
       <Provider store={store}>
         <div className={style.wrapper}>
@@ -32,12 +30,9 @@ root.render(
             <Route path='/page-rules' element={<PageRules />} />
             <Route path='/page-offer' element={<PageOffer />} />
             <Route path='/books/all/:id' element={<BookPage />} />
-            
-           
           </Routes>
           <Footer />
         </div>
       </Provider>
     </HashRouter>
-  </React.StrictMode>
 );
