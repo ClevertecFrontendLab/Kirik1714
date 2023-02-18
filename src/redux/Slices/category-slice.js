@@ -7,7 +7,7 @@ import axios from 'axios';
 export const fetchCategory=createAsyncThunk('category/fetchCategory',
     async()=>{
         const {data} = await axios.get('https://strapi.cleverland.by/api/categories')
-        console.log(data)
+    
         return data
     }
 )
