@@ -16,7 +16,7 @@ import './reset.css';
 import style from './index.module.css'
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); 
 
 root.render(
     <HashRouter>
@@ -25,7 +25,7 @@ root.render(
           <Header />
           <Routes>
             <Route path='/' element={<Navigate to='/books/all' />} />
-            <Route path='/books/:category' element={<MainPage />} />
+            <Route path='/books/:category'   element={<MainPage />} />
             <Route />
             <Route path='/page-rules' element={<PageRules />} />
             <Route path='/page-offer' element={<PageOffer />} />

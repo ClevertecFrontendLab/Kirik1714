@@ -4,7 +4,7 @@
 /* eslint-disable react/no-array-index-key */
 import {  useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {  NavLink, useLocation } from 'react-router-dom'
+import {  NavLink, useLocation, useParams } from 'react-router-dom'
 
 import strokeActive from '../../assets/img/Stroke.svg';
 import strokeBlack from '../../assets/img/StrokeBlack.svg';
@@ -15,6 +15,8 @@ import style from './sidebar-sidebar.module.scss';
  
  
 export const Sidebar = () => {
+  const param =useParams()
+  console.log(param)
   const categories =useSelector(state=>state.categoty.categories)
   // fot category
   const isLoading = useSelector(state =>state.categoty.isLoading)
