@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.block__error{
+    width: 100%;
+    position: relative;
+    top: -256px;
+    padding: 20px 2.5% 20px;
+    font-family: Montserrat; 
+    background: #FEEBEA;
+    z-index: 9999;
+    border: 1.5px solid #F42C4F;
+    border-radius: 5px;
+    
+}
+.MainPage__err{
+    display: flex;
+    flex-direction: column;
+    
+} 
+.MainPage,.MainPage__err{
+    font-family: Montserrat;
+    display: flex;
+    flex: 1;
+    gap: 6px;
+    &__mainContent{
+        flex: 1;
+    }
+} 
+.MainPageBlur{
+    font-family: Montserrat;
+    display: flex;
+    flex: 1;
+    gap: 6px;
+    // background-color: rgba(54, 54, 54, 0.3);
+    
+    &__mainContent{
+        flex: 1;
+    }
+    .MainPage__sidebar{
+        filter: blur(10px);
+    }
+}
+
+@media (max-width:1031px) {
+    .block__error{
+        top: 0px;
+    }
+    .MainPage__err__sidebar{
+        display: none;
+
+    }
+    .MainPage__sidebar{
+        display: none;
+    }
+    
+}
+@media(max-width:790px){
+    .block__error{
+        top: -55px;
+    }
+}
+@media (max-width:749px) {
+    .block__error{
+        top: -30px;
+    }
+}

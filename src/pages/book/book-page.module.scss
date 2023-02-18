@@ -1,0 +1,509 @@
+.error{
+    height: 530px;
+}
+@media (max-width:300px) {
+    .error{
+        height: 330px;
+    }
+}
+
+.block__error{
+    width: 100%;
+    position: relative;
+    padding: 20px 2.5% 20px;
+    font-family: Montserrat; 
+    top: -80px;
+    background: #FEEBEA;
+    z-index: 9999;
+   
+    border: 1.5px solid #F42C4F;
+    border-radius: 5px;
+    
+}
+
+.disable__block{
+    display: none;
+}
+.full__book{
+   flex:1;
+   
+}
+.source__blur{
+    filter: blur(10px); 
+}
+.source,.source__blur{
+ width: 100%;
+ position: absolute;
+ background: rgba(249, 249, 250, 1);
+ left: 0;
+ padding: 20px 11% 20px;
+ font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+color: rgba(167, 167, 167, 1);
+
+}
+.block__book{
+    display: flex;
+    gap:30px;
+    margin-top :90px;
+    margin-bottom: 42px;
+    .img_book{
+        height: 593px;
+        width: 445px;
+        border-radius: 10px;
+
+    }
+}
+
+
+.main__description{
+    width: 100%;
+    .title{
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 24px;
+   
+    }
+    .author{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: rgba(167, 167, 167, 1);
+    margin-bottom: 32px;
+    }
+    .about__book{
+        color: rgba(54, 54, 54, 1);
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        border-bottom: 1px solid #EBEBEB;
+        width: 305px;
+
+    }
+    .topic{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.10000000149011612px;
+        margin-top: 32px;
+    }
+   
+}
+.other__description{
+    display: flex;
+    flex-direction: column;
+    gap:62px;
+    .title{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.10000000149011612px;
+    margin-bottom: 16px;
+    padding-bottom:8px;
+    border-bottom: 1px solid #EBEBEB;
+    width: 350px;
+    }
+
+    .more__info{
+        .description{
+            display: grid; 
+            grid-template-columns: repeat(2 ,1fr);
+
+            .description__block{
+                display: grid;
+                grid-template-columns: repeat(1 ,1fr);
+                gap: 16px;
+                .block__item{
+                    display: grid;
+                    grid-template-columns: repeat(2 ,1fr);
+                    align-items: flex-start;
+
+                }
+
+              
+            }
+            .params__item{
+        
+                font-family: Montserrat;
+                height: 18px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.10000000149011612px;
+               color: rgba(167, 167, 167, 1);
+
+            }
+            .property__item{      
+
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.10000000149011612px;
+          
+
+
+
+            }
+         
+
+       
+        }
+    }
+    .reviews{
+        margin-top: 46px;
+        .title{
+            height: 28px;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            border-bottom: none;
+            gap: 6px;
+            .strokeActive{
+                margin-left: auto;
+                transition: ease-in 0.2s;
+                transform: rotate(180deg);
+            }
+            .strokeNotActive{
+                margin-left: auto;
+                transition: ease-in 0.2s;
+                transform: rotate(360deg);
+
+            }
+        }
+    }
+}
+.reviews{
+    .reviews__block{
+        display: flex;
+        flex-direction: column;
+        gap:42px;
+    }
+    .count{
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.10000000149011612px;
+        color:rgba(114, 114, 114, 1)
+    }
+    .review__item{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .block__user{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: rgba(114, 114, 114, 1);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.10000000149011612px;
+        .user_info{
+            display: flex;
+            gap:25px;
+        }
+       
+    
+    }
+    .block__topic{
+    color: rgba(54, 54, 54, 1);
+    max-width: 730px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.10000000149011612px;
+
+
+    }
+    
+
+}
+.mark__book{
+
+    .mark__btn{
+        margin-bottom: 0px;
+    }
+}
+
+.stars{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .average_sum{
+       
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.10000000149011612px;
+
+        margin-left: 8px;
+    }
+}
+.button{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    width: 350px;
+    display: inline-block;
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    border-radius: 30px;
+    padding: 14px 0px;
+    margin-bottom: 62px;
+    &:hover{
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    }
+}
+
+
+@media(max-width:1072px){
+    .block{
+        .title{
+           
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0.10000000149011612px;
+            text-align: left;
+
+        }
+        .author{
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0.10000000149011612px;
+
+        }
+    }
+    .block__book{
+        .img_book{
+            height: 198px;
+            width: 136px;
+            left: 0px;
+            top: 0px;
+            border-radius: 3px;
+
+        }
+        .info{
+            position: relative;
+           
+
+            left: -166px;
+            .about__book{
+
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+
+            }
+           
+        }
+    }
+
+    .rating{
+        .title{
+          
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.10000000149011612px;
+
+
+        }
+    }
+    .reviews{
+        .title{
+          
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.10000000149011612px;
+
+
+        }
+    }
+    .more__info{
+        .title{
+
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.10000000149011612px;
+    
+        }
+        .description{
+
+            .description__block{
+           
+                .params__item{
+                   
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0.10000000149011612px;
+                }
+                .property__item{
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0.10000000149011612px;
+
+                }
+            }
+        
+            
+        }
+    }
+    .mark__book{
+        .mark__btn{
+            width: 100%;
+        }
+    }
+
+}
+@media(max-width:835px){
+    .source{
+        padding-left:  8% ;
+    }
+    .block__error{
+        top:-58px;
+    }
+}
+ 
+@media(max-width:721px){
+    .block__book{
+        flex-direction: column;
+        align-items: center;
+        .info{
+            position: static;
+            left: 0px;
+        }
+    }
+}
+@media(max-width:521px) {
+    .block{
+        .block__book{
+            margin-top :110px;
+            .img_book{
+                height: 259.5622863769531px;
+                width: 188px; 
+                border-radius: 10px;
+              
+
+            }
+            .about__book{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0.10000000149011612px;
+                width: 100%;
+           
+    
+            }
+            .topic{
+                margin-top: 0px;
+            }
+            .button{
+                width: 288px;
+                margin-bottom: 42px;
+
+            }
+        }
+       .other__description{
+            gap: 42px;
+    
+            
+           .rating{
+               font-size: 18px;
+               font-weight: 700;
+               line-height: 28px;
+               letter-spacing: 0.10000000149011612px;
+               
+            .title{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0.10000000149011612px;
+                width: 100%;
+              
+
+              
+            }
+            .start__item{
+                width: 28px;
+                height: 28px;
+            }
+           }
+           .reviews{
+            .title{
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0.10000000149011612px;
+
+            }
+            .reviews__block{
+               
+                    .user_info{
+                        display: block;
+                        
+                    }
+                }
+           }
+       }
+        .more__info{
+            .title{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0.10000000149011612px;
+                width: 100%;
+                
+        
+            }
+            .description{
+                display: grid; 
+                grid-template-columns: repeat(1 ,1fr);
+                .second{
+                    margin-top:16px ;
+                }
+            }
+        }
+    }
+    .block__error{
+        padding: 20px 10px 20px;
+        top:-41px;
+    }
+    
+}
+
+@media(max-width:340px) {
+    .block{
+        .block__book{
+            margin-top: 130px;
+        }
+    }
+}

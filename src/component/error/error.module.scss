@@ -1,0 +1,40 @@
+.block__error{  
+    display: flex;
+    align-items: center;
+    
+    .attention__text{
+   
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+ 
+
+    }
+    .attention{
+        margin-right: 28px;
+    }
+    .close_attention{
+        margin-left: auto;
+    }
+}
+
+@media (max-width:749px) {
+    .block__error{
+      
+        align-items: normal;
+        .attention__text{
+            width: 186px;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0.10000000149011612px;
+            text-align: left;
+
+        }
+        .attention{
+            margin-right: 15px;
+        }
+    }
+}
