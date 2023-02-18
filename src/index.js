@@ -8,7 +8,6 @@ import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Footer} from './component/footer/footer-footer.jsx';
 import {Header} from './component/header/header-header.jsx';
 import { BookPage } from './pages/book';
-import { Error } from './pages/error/error.jsx';
 import { MainPage } from './pages/main';
 import { PageOffer } from './pages/offer/offer-agreement';
 import { PageRules } from './pages/usage-rules/usage-rules';
@@ -34,7 +33,7 @@ root.render(
             <Route path='/page-offer' element={<PageOffer />} />
             <Route path='/books/all/:id' element={<BookPage />} />
             
-            <Route path='*' element={<Error/>} />
+           
           </Routes>
           <Footer />
         </div>
