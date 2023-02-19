@@ -8,6 +8,9 @@ export const fetchCategory=createAsyncThunk('category/fetchCategory',
     async()=>{
         const {data} = await axios.get('https://strapi.cleverland.by/api/categories')
     
+        console.log('Из Slice')
+        console.log(data)
+
         return data
     }
 )
@@ -25,22 +28,25 @@ export const CategorySlice=createSlice({
             state.category= action.payload
         }
     },
-    extraReducers:{
-        [fetchCategory.pending]:(state)=>{
+    extraReducers: builder =>{
+        builder
+        .addCase( fetchCategory.pending ,(state)=>{
             state.isLoading='loading'
             state.categories=[]
 
-            
-        },
-        [fetchCategory.fulfilled]:(state,action)=>{
+        })
+        .addCase( fetchCategory.fulfilled ,(state,action)=>{
             state.categories = action.payload
             state.isLoading='sucess'
-            
-        },
-        [fetchCategory.rejected]:(state)=>{
+
+        })
+        .addCase( fetchCategory.rejected ,(state,action)=>{
             state.isLoading='error';
             state.categories=[]
-        }
+
+        })
+
+
     }
     
 })

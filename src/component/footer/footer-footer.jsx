@@ -19,8 +19,8 @@ export const Footer = () => {
       <div className={style.footer__description}>
         <div className={style.footer__text}>© 2020-2023 Cleverland. Все права защищены.</div>
         <div className={style.footer__socNetwork}>
-          {SocNetwork.map((item) => (
-            <img src={item} alt={item} />
+          {SocNetwork.map((item,index) => (
+            <img src={item} key={item.index} alt={item} />
           ))}
         </div>
       </div>

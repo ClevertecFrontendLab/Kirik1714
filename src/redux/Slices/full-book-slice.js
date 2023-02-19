@@ -7,7 +7,7 @@ import axios from 'axios';
 export const fetchFullBook=createAsyncThunk('bookId/fetchFullBook',
     async(id)=>{
         const {data}= await axios(`https://strapi.cleverland.by/api/books/${id}`)
-        console.log(data)
+        
         return data
     }
 )

@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 /* eslint-disable react/no-array-index-key */
-import {  useEffect, useState } from 'react';
+import {  useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {  NavLink, useLocation, useParams } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ import style from './sidebar-sidebar.module.scss';
  
 export const Sidebar = () => {
   const param =useParams()
-  console.log(param)
+ 
   const categories =useSelector(state=>state.categoty.categories)
   // fot category
   const isLoading = useSelector(state =>state.categoty.isLoading)
@@ -43,11 +43,9 @@ export const Sidebar = () => {
     }
     
     useEffect(()=>{
-
       dispatch(fetchCategory())
     },[])
 
-    
 
     return (
       <div
@@ -83,8 +81,8 @@ export const Sidebar = () => {
                 <ul>
                   {' '}
                   {categories.map((item) => (
-                    <NavLink to={`/books/${item.path}`}> 
-                      <li key={item.id}>
+                    <NavLink key={item.id} to={`/books/${item.path}`}> 
+                      <li >
                         <div
                           role='button'
                           tabIndex='0'

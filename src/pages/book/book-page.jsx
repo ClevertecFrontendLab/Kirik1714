@@ -20,7 +20,7 @@ const Stars =[star,star,star,star,starVoid]
 export const BookPage = () => {
   const dataBook=useSelector(state=>state.fullBook.fullBook);
   const {id}=useParams();
-  console.log(id)
+
   const [isOpen,setIsOpen] =useState(false)
   const dispatch =useDispatch();
   const isLoading =useSelector(state=>state.fullBook.isLoading)
