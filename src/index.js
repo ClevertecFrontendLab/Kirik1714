@@ -19,20 +19,24 @@ import style from './index.module.css'
 const root = ReactDOM.createRoot(document.getElementById('root')); 
 
 root.render(
-    <HashRouter>
-      <Provider store={store}>
-        <div className={style.wrapper}>
-          <Header />
-          <Routes>
+  <HashRouter>
+    <Provider store={store}>
+      <div className={style.wrapper}>
+        <Header />
+        <Routes>
+          <Route>
             <Route path='/' element={<Navigate to='/books/all' />} />
-            <Route path='/books/:category'   element={<MainPage />} />
-            <Route />
-            <Route path='/page-rules' element={<PageRules />} />
-            <Route path='/page-offer' element={<PageOffer />} />
-            <Route path='/books/all/:id' element={<BookPage />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Provider>
-    </HashRouter>
+            <Route path='/books/:category' element={<MainPage />} />
+          </Route>
+
+          <Route path='/page-rules' element={<PageRules />} />
+          <Route path='/page-offer' element={<PageOffer />} />
+          {/* <Route path='/books/all/:id' element={<BookPage />} /> */}
+          <Route path='/books/:category/:id' element={<BookPage />} />
+
+        </Routes>
+        <Footer />
+      </div>
+    </Provider>
+  </HashRouter>
 );

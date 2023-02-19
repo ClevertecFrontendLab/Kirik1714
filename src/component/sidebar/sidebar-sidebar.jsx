@@ -83,7 +83,7 @@ export const Sidebar = () => {
                 <ul>
                   {' '}
                   {categories.map((item) => (
-                    <NavLink to={`/books/${item.path}`}>
+                    <NavLink to={`/books/${item.path}`}> 
                       <li key={item.id}>
                         <div
                           role='button'

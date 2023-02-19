@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { fetchBooks } from '../../redux/Slices/book-slice';
 import { BookCart } from '../book-cart/book-cart';
@@ -24,6 +24,9 @@ export const MainContent = () => {
   const isLoading = useSelector(state =>state.categoty.isLoading)
 
   const dispatch =useDispatch();
+
+  const {category} =useParams()
+  
 
   
 
@@ -90,7 +93,7 @@ export const MainContent = () => {
       ) : (
         <section className={location ? style.mainContent__cardBook__block : style.mainContent__cardBook__row}>
           {books.map((item) => (
-            <Link to={`/books/all/${item.id}`} key={item.id}>
+            <Link to={`/books/${category}/${item.id}`} key={item.id}>
               <BookCart location={location} {...item} />
             </Link>
           ))}
