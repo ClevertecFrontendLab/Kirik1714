@@ -31,7 +31,6 @@ root.render(
 
           <Route path='/page-rules' element={<PageRules />} />
           <Route path='/page-offer' element={<PageOffer />} />
-          {/* <Route path='/books/all/:id' element={<BookPage />} /> */}
           <Route path='/books/:category/:id' element={<BookPage />} />
 
         </Routes>
