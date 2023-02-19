@@ -4,6 +4,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const initialState={
+    categories:[],
+    isLoading:'loading',
+}
+
 export const fetchCategory=createAsyncThunk('category/fetchCategory',
     async()=>{
         const {data} = await axios.get('https://strapi.cleverland.by/api/categories')
@@ -15,10 +20,6 @@ export const fetchCategory=createAsyncThunk('category/fetchCategory',
     }
 )
 
-const initialState={
-    categories:[],
-    isLoading:'loading',
-}
  
 export const CategorySlice=createSlice({
     name:'category',
