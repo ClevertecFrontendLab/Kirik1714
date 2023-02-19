@@ -27,7 +27,7 @@ export const MainPage = () => {
   }
 
   return (
-    <div className={status === 'loading' || isLoading ==='loading' ? style.MainPageBlur : style.MainPage}>
+    <div className={status === 'loading'  ? style.MainPageBlur : style.MainPage}>
       <div className={style.MainPage__sidebar}>
         <Sidebar />
       </div> 
