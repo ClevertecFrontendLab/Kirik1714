@@ -43,7 +43,11 @@ export const Sidebar = () => {
     }
     
     useEffect(()=>{
-      dispatch(fetchCategory())
+      try {
+        dispatch(fetchCategory())
+      } catch (error) {
+        alert('Не уадлось получить категории')
+      }
     },[])
 
 
